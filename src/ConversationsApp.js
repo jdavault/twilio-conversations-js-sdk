@@ -76,8 +76,6 @@ class ConversationsApp extends React.Component {
 
   getToken = async () => {
     // Paste your unique Chat token function
-    console.log("----------------------TOKEN-URL", process.env.REACT_APP_ACCESS_TOKEN_SERVICE_URL)
-
     const requestAddress = process.env.REACT_APP_ACCESS_TOKEN_SERVICE_URL;
     if (!requestAddress) {
       return Promise.reject(
@@ -96,11 +94,7 @@ class ConversationsApp extends React.Component {
       }
       return Promise.reject(`ERROR received from ${requestAddress}: ${error}\n`);
     }
-
-    // const myToken =
-    //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzVkODZlM2E1MzI0ZGExNTM5NGRlYzYxNmI3MjZiOTZmLTE2OTU3NTg3ODUiLCJncmFudHMiOnsiaWRlbnRpdHkiOiJkYXZhdWoyIiwiY2hhdCI6eyJzZXJ2aWNlX3NpZCI6IklTMGUwNDYyNTI5MzNhNGY3YThhN2RmZThiYmIzM2RiY2UifX0sImlhdCI6MTY5NTc1ODc4NSwiZXhwIjoxNjk1NzYyMzg1LCJpc3MiOiJTSzVkODZlM2E1MzI0ZGExNTM5NGRlYzYxNmI3MjZiOTZmIiwic3ViIjoiQUMxMTk0Nzg1OWM4NDQ4ZjkwMTUwNjZlNGQ2ZDk4NThiZiJ9._tmRs2p_zIe720N739wZ0wJEjAaddQIC7C-IhtOGzn4";
-    //this.setState({ token: response.data }, this.initConversationsCallback);
-    console.log("this.State ---- getToken()", this.state)
+    console.log("this.State ---- getToken()", this.state.token)
   };
 
   initConversationsCallback = async () => {

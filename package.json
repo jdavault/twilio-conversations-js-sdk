@@ -23,7 +23,7 @@
     "concurrently": "^3.6.1"
   },
   "scripts": {
-    "start": "concurrently \"npx react-scripts start\" \"node index.js\"",
+    "start": "concurrently \"npx react-scripts start\" \"node server.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
